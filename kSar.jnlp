@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<jnlp spec="1.0+" codebase="http://ksar.atomique.net/kSar/kSar-5.0.4" href="kSar.jnlp">
+  <information>
+    <title>kSar v5</title>
+    <vendor>Atomique.net</vendor>
+    <homepage href="http://ksar.atomique.net/" />
+    <description>kSar : a sar grapher</description>
+    <description kind="tooltip">kSar 5.0.4</description>
+    <offline-allowed />
+ 
+  </information>
+
+<security>
+  <all-permissions/>
+</security>
+
+  <resources>
+    <j2se version="1.5+" initial-heap-size="64m" max-heap-size="256m" />
+    <jar href="kSar.jar" main="true"/>
+    <jar href="lib/iText-2.1.2u.jar"/>
+    <jar href="lib/jcommon-1.0.13.jar"/>
+    <jar href="lib/jfreechart-1.0.10.jar"/>
+    <jar href="lib/jsch-0.1.39.jar"/>
+  </resources>
+  <application-desc main-class="net.atomique.ksar.Main" />
+</jnlp>
+

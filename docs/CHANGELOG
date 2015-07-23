@@ -1,0 +1,8 @@
+
+From 5.0.4
+    Using command line show an error of bad filename (can be safetly ignored)
+
+From 5.0.2
+    * saving preference for image HTML wasn't working
+    * added preferences for disabling SSH strict host checking
+    * added command line option -ClearAllPrefs to remove all preferences

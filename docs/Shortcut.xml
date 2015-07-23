@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : Shortcut.xml
+    Created on : 10 juillet 2008, 20:58
+    Author     : alex
+    Description:
+        Purpose of the document follows.
+-->
+
+<ksar-config>
+    <shortcut>
+        <!--
+        first shortcut will ssh to myhost using username mylogin. a new windown
+        with the data will be created at startup
+        -->
+        <description>Description of the first shortcut</description>
+        <type>ssh</type>
+	<host>myhost</host>
+	<login>mylogin</login>	
+        <startup>yes</startup>
+        <command>sar -A</command>
+    </shortcut>
+    <shortcut>
+        <!--
+        will connect thought ssh to myhost with username mylogin, gathering
+        data using pidstat command to check apache process
+        will also grab processlist using ps -ef (still thought ssh)
+        -->
+        <description>Description of the pidstat shortcut</description>
+        <type>ssh</type>
+	<host>myhost</host>
+	<login>mylogin</login>	
+        <command>pidstat -C apache</command>
+        <processlist>ps -ef</processlist>
+    </shortcut>
+    <shortcut>
+        <!--
+        just a shortcut to load a special file on the local machine
+        -->
+        <description>a second shortcut to load a local file</description>
+        <type>file</type>
+        <filename>/myhomedir/myfile</filename>
+    </shortcut>
+    <shortcut>
+        <!--
+        will run the command sar -A on the local machine
+        -->
+        <description>3 shortcut to use launch a local command</description>
+        <type>command</type>
+        <command>sar -A</command>
+    </shortcut>
+    <!--
+    association are currently not in use
+    -->
+    <association>
+        <description>gather linux network</description>
+        <command>sar -e EDEV</command>
+    </association>
+   <association>
+       <description>monitor apache</description>
+       <command>pidstat -C apache</command>
+       <processlist>ps -ef</processlist>
+   </association>
+</ksar-config>

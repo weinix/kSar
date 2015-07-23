@@ -1,0 +1,77 @@
+**********************************************************
+*                                                        *
+*         #####                                  ####### *
+* #    # #     #    ##    #####           #    # #       *
+* #   #  #         #  #   #    #          #    # #       *
+* ####    #####   #    #  #    #          #    # ######  *
+* #  #         #  ######  #####           #    #       # *
+* #   #  #     #  #    #  #   #            #  #  #     # *
+* #    #  #####   #    #  #    #            ##    #####  *
+*                                                        *
+**********************************************************
+
+
+Site: http://ksar.atomique.net/
+Author: Alexandre CHERIF
+Licence : BSD Like
+
+
+Minimum Requirements:
+    * JRE Version 1.5 or +
+
+
+RUNNING THE GUI:
+
+    You can run the GUI with 4 ways:
+
+    * GUI only : java -jar kSar-x.x.x.jar
+
+    * GUI default data grabbing : java -jar kSar-x.x.x.jar -startup
+
+    * GUI with the "one login for all" function : java -jar kSar-x.x.x.jar -wizard
+
+    * GUI and collect : java -jar kSar-x.x.x.jar -input 'ssh:// or file:// or cmd://'
+        eg. : java -jar kSar-x.x.x.jar -input 'cmd:///usr/bin/sar -f /tmp/mysar.file'
+        
+
+RUNNING ON THE COMMAND LINE:
+
+    * To run kSar on the command line, you *MUST* specify input and output argument:
+        eg.: java -jar kSar-x.x.x.jar -input 'file:///var/log/sa/sarXX' -outputPDF today.pdf
+
+
+GETTING THE HELP
+
+    * Show the help
+        java -jar kSar-x.x.x.jar  -help
+
+
+USING SHORTCUT XML
+
+    You can make template of data collection via XML (see contrib/shortcut.xml). This shortcut can be open
+    with (-startup or -wizard cf. upper)
+
+    * Replace current shortcut
+        java -jar kSar-x.x.x.jar -replaceShortcut newxml_shortcut_file.xml
+
+    * Add some shortcut
+        java -jar kSar-x.x.x.jar -addShortcut newxml_shortcut_file.xml
+
+    
+ADMIN STUFF:
+
+    * Clear all the preferences
+        java -jar kSar-x.x.x.jar -ClearAllPrefs
+
+
+
+NOTES:
+    if you are running on solaris, and want more system statistics you can see 
+        Esar (http://esar.atomique.net)
+
+
+        
+    
+
+
+
